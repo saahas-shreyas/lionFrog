@@ -1,0 +1,24 @@
+to sf :x :y
+if :y = 0 [stop]
+repeat 4 [ fd :x rt 90 
+tri :x * 0.4
+:y - 1
+]
+end
+
+to tr :x :y
+if :y = 0 [stop]
+repeat 3 [ fd :x rt 120 
+tr :x * 0.4
+:y - 1
+]
+end
+
+to tri :x :y
+if :y = 0 [stop]
+repeat 4 [ fd :x rt 90 
+tri :x * 0.4
+:y - 1
+]
+end
+
