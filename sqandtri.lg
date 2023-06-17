@@ -1,8 +1,22 @@
+to fractal :x :y :z
+if :y = 0 [stop]
+repeat :z [ fd :x rt 360 / :z  
+fractal :x * 0.4 :y - 1 :z
+]
+end
+
 to sf :x :y
 if :y = 0 [stop]
 repeat 4 [ fd :x rt 90 
 tri :x * 0.4
 :y - 1
+]
+end
+
+to sq :x :y
+if :y = 0 [stop]
+repeat 3 [ fd :x rt 120 
+sq :x * 0.4 :y - 1
 ]
 end
 
@@ -22,3 +36,6 @@ tri :x * 0.4
 ]
 end
 
+Make "x 12.8
+Make "y 1
+Make "z 100
